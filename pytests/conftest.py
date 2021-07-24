@@ -1,5 +1,6 @@
 from selenium import webdriver
 import pytest
+import time
 
 
 @pytest.fixture(scope="class")
@@ -15,5 +16,6 @@ def setup(request):
     request.cls.driver = driver
 
     yield
+    time.sleep(4)
     driver.close()
     driver.quit()
