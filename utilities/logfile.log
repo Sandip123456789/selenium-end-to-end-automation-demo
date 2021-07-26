@@ -77,3 +77,37 @@ Success! The Form has been submitted successfully!.
 2021-07-26 09:31:57,963 : INFO : getCountryName : Entering country name as Ge
 2021-07-26 09:32:03,936 : INFO : test_e2e : Received success text is ×
 Success! Thank you! Your order will be delivered in next few weeks :-).
+2021-07-27 00:01:09,588 : INFO : test_e2e : Getting all the product titles
+2021-07-27 00:01:09,681 : INFO : test_e2e : iphone X
+2021-07-27 00:01:09,777 : INFO : test_e2e : Samsung Note 8
+2021-07-27 00:01:09,801 : INFO : test_e2e : Nokia Edge
+2021-07-27 00:01:09,823 : INFO : test_e2e : Blackberry
+2021-07-27 00:01:10,099 : INFO : getCountryName : Entering country name as Ge
+2021-07-27 00:01:16,018 : INFO : test_e2e : Received success text is ×
+Success! Thank you! Your order will be delivered in next few weeks :-).
+2021-07-27 00:01:30,674 : INFO : test_homePage : Entered name is Killerbee and Email is killer@gmail.com
+2021-07-27 00:01:31,181 : INFO : test_homePage : ×
+Success! The Form has been submitted successfully!.
+2021-07-27 00:01:31,390 : INFO : test_homePage : Entered name is Rusty and Email is rustyboi@gmail.com
+2021-07-27 00:01:31,390 : INFO : test_homePage : Entered name is Rusty and Email is rustyboi@gmail.com
+2021-07-27 00:01:31,837 : INFO : test_homePage : ×
+Success! The Form has been submitted successfully!.
+2021-07-27 00:01:31,837 : INFO : test_homePage : ×
+Success! The Form has been submitted successfully!.
+2021-07-27 00:03:02,769 : INFO : test_e2e : Getting all the product titles
+2021-07-27 00:03:02,810 : INFO : test_e2e : iphone X
+2021-07-27 00:03:02,880 : INFO : test_e2e : Samsung Note 8
+2021-07-27 00:03:02,904 : INFO : test_e2e : Nokia Edge
+2021-07-27 00:03:02,925 : INFO : test_e2e : Blackberry
+2021-07-27 00:03:03,126 : INFO : getCountryName : Entering country name as Ge
+2021-07-27 00:03:08,957 : INFO : test_e2e : Received success text is ×
+Success! Thank you! Your order will be delivered in next few weeks :-).
+2021-07-27 00:03:23,562 : INFO : test_homePage : Entered name is Killerbee and Email is killer@gmail.com
+2021-07-27 00:03:24,076 : INFO : test_homePage : ×
+Success! The Form has been submitted successfully!.
+2021-07-27 00:03:24,270 : INFO : test_homePage : Entered name is Rusty and Email is rustyboi@gmail.com
+2021-07-27 00:03:24,270 : INFO : test_homePage : Entered name is Rusty and Email is rustyboi@gmail.com
+2021-07-27 00:03:24,720 : INFO : test_homePage : ×
+Success! The Form has been submitted successfully!.
+2021-07-27 00:03:24,720 : INFO : test_homePage : ×
+Success! The Form has been submitted successfully!.
