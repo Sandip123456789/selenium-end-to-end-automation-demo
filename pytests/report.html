@@ -243,7 +243,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 24-Jul-2021 at 16:05:22 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 26-Jul-2021 at 00:00:51 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -262,8 +262,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.9.1</td></tr></table>
     <h2>Summary</h2>
-    <p>1 tests ran in 22.69 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>3 tests ran in 65.67 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">2 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -274,12 +274,74 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="passed results-table-row">
+      <tbody class="failed results-table-row">
         <tr>
-          <td class="col-result">Passed</td>
+          <td class="col-result">Failed</td>
           <td class="col-name">test_e2e.py::TestOne::test_e2e</td>
-          <td class="col-duration">22.61</td>
+          <td class="col-duration">26.98</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>
+            <div><div><img src="test_e2e.py_TestOne_test_e2e.png" alt="screenshot" style="width:304px;height:228px;" onclick="window.open(this.src)" align="right"/></div></div>
+            <div class="log">self = &lt;pytests.test_e2e.TestOne object at 0x000001CCA4607A30&gt;<br/><br/>    def test_e2e(self):<br/>        driver = self.driver<br/>    <br/>        #for logger<br/>        log = self.getLogger()<br/>    <br/>        #Creating Objects of from Classes<br/>        homePage = HomePage(driver)<br/>        checkoutPage = CheckoutPage(driver)<br/>        confirmPage = ConfirmPage(driver)<br/>    <br/>        #click shop, imported from HomePage<br/>        homePage.getShopBtn()<br/>    <br/>        # to scroll down top to bottom<br/>        driver.execute_script(&quot;window.scrollTo(0, document.body.scrollHeight)&quot;)<br/>    <br/>        #click add item button, imported from CheckoutPage<br/>        # Steps to Click on Add to cart button<br/>        log.info(&quot;Getting all the product titles&quot;)<br/>        products = checkoutPage.getCardTitle()<br/>        for product in products:<br/>            productName = product.find_element_by_xpath(&quot;div/h4/a&quot;).text<br/>            print(productName)<br/>            log.info(productName)<br/>            if productName == &quot;iphone X&quot;:<br/>                # Add item into cart<br/>                product.find_element_by_xpath(&quot;div[2]/button&quot;).click()<br/>    <br/>        # to scroll down bottom to top<br/>        driver.execute_script(&quot;window.scrollTo(document.body.scrollHeight, 0)&quot;)<br/>    <br/>        # To click on checkout button, imported from CheckoutPage<br/>        checkoutPage.getCheckoutList().click()<br/>    <br/>        # enter quantity no<br/>        checkoutPage.getQuantity().clear()<br/>        checkoutPage.getQuantity().send_keys(&quot;2&quot;)<br/>    <br/>        checkoutPage.getCheckOut().click()<br/>    <br/>        #enter country name<br/>        confirmPage.getCountryName()<br/>    <br/>        #Click checkBox, imported from ConfirmPage<br/>        checkbox = confirmPage.getCheckBox()<br/>        checkbox.click()<br/>        assert not checkbox.is_selected()<br/>    <br/>        #Click purchase button, imported from ConfirmPage<br/>        confirmPage.getPurchaseBtn().click()<br/>    <br/>        #validating success message<br/>        successText = driver.find_element_by_class_name(&quot;alert-success&quot;).text<br/>&gt;       assert &quot;Success! kjbjkjkkjbjkb&quot; in successText<br/><span class="error">E       AssertionError: assert &#x27;Success! kjbjkjkkjbjkb&#x27; in &#x27;×\nSuccess! Thank you! Your order will be delivered in next few weeks :-).&#x27;</span><br/><br/>test_e2e.py:68: AssertionError<br/> -----------------------------Captured stderr setup------------------------------ <br/>
+
+====== WebDriver manager ======
+Current google-chrome version is 92.0.4515
+Get LATEST driver version for 92.0.4515
+Driver [C:\Users\sndp_\.wdm\drivers\chromedriver\win32\92.0.4515.43\chromedriver.exe] found in cache
+<br/> -------------------------------Captured log setup------------------------------- <br/>INFO     WDM:logger.py:22 
+
+INFO     WDM:logger.py:12 ====== WebDriver manager ======
+INFO     WDM:logger.py:12 Current google-chrome version is 92.0.4515
+INFO     WDM:logger.py:12 Get LATEST driver version for 92.0.4515
+INFO     WDM:logger.py:12 Driver [C:\Users\sndp_\.wdm\drivers\chromedriver\win32\92.0.4515.43\chromedriver.exe] found in cache<br/> ------------------------------Captured stdout call------------------------------ <br/>iphone X
+Samsung Note 8
+Nokia Edge
+Blackberry
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_e2e:test_e2e.py:33 Getting all the product titles
+INFO     test_e2e:test_e2e.py:38 iphone X
+INFO     test_e2e:test_e2e.py:38 Samsung Note 8
+INFO     test_e2e:test_e2e.py:38 Nokia Edge
+INFO     test_e2e:test_e2e.py:38 Blackberry
+INFO     getCountryName:ConfirmPage.py:15 Entering country name as Ge<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_homePage.py::TestHomePage::test_homePage[getData0]</td>
+          <td class="col-duration">20.97</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> -----------------------------Captured stderr setup------------------------------ <br/>
+
+====== WebDriver manager ======
+Current google-chrome version is 92.0.4515
+Get LATEST driver version for 92.0.4515
+Get LATEST driver version for 92.0.4515
+Trying to download new driver from https://chromedriver.storage.googleapis.com/92.0.4515.43/chromedriver_win32.zip
+Driver has been saved in cache [C:\Users\sndp_\.wdm\drivers\chromedriver\win32\92.0.4515.43]
+<br/> -------------------------------Captured log setup------------------------------- <br/>INFO     WDM:logger.py:12 
+
+INFO     WDM:logger.py:12 ====== WebDriver manager ======
+INFO     WDM:logger.py:12 Current google-chrome version is 92.0.4515
+INFO     WDM:logger.py:12 Get LATEST driver version for 92.0.4515
+INFO     WDM:logger.py:12 Get LATEST driver version for 92.0.4515
+INFO     WDM:logger.py:12 Trying to download new driver from https://chromedriver.storage.googleapis.com/92.0.4515.43/chromedriver_win32.zip
+INFO     WDM:logger.py:12 Driver has been saved in cache [C:\Users\sndp_\.wdm\drivers\chromedriver\win32\92.0.4515.43]<br/> ------------------------------Captured stdout call------------------------------ <br/>×
+Success! The Form has been submitted successfully!.
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_homePage:test_homePage.py:20 Entered name is Killerbee and Email is killer@gmail.com
+INFO     test_homePage:test_homePage.py:37 ×
+Success! The Form has been submitted successfully!.<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">test_homePage.py::TestHomePage::test_homePage[getData1]</td>
+          <td class="col-duration">7.91</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>×
+Success! The Form has been submitted successfully!.
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     test_homePage:test_homePage.py:20 Entered name is Rusty and Email is rustyboi@gmail.com
+INFO     test_homePage:test_homePage.py:37 ×
+Success! The Form has been submitted successfully!.<br/></div></td></tr></tbody></table></body></html>
